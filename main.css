@@ -1,0 +1,128 @@
+/* font-family: 'Fraunces', serif; */
+/* font-family: 'Montserrat', sans-serif; */
+
+/* - Dark cyan: hsl(158, 36%, 37%)
+- Cream: hsl(30, 38%, 92%)
+
+### Neutral
+
+- Very dark blue: hsl(212, 21%, 14%)
+- Dark grayish blue: hsl(228, 12%, 48%)
+- White: hsl(0, 0%, 100%) */
+
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Caveat&family=Montserrat:ital,wght@0,500;0,700;1,500;1,700&family=Quicksand:wght@400;500;600;700&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Caveat&family=Fraunces:opsz,wght@9..144,700&family=Montserrat:ital,wght@0,500;0,700;1,500;1,700&family=Quicksand:wght@400;500;600;700&family=Ubuntu&display=swap');
+
+:root {
+    --cream-color: hsl(30, 38%, 92%);
+    --dark-cyan: hsl(158, 36%, 37%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayis-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* font-family: 'Fraunces', serif; */
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cream-color);
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+    margin: 1rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#content .info {
+    background-color: #fff;
+    padding: 2rem;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#content .info .per {
+
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: var(--Dark-grayis-blue);
+}
+
+#content .info h1 {
+    font-size: 32px;
+    font-family: 'Fraunces', serif;
+    line-height: 1;
+    margin: 20px 0;
+
+}
+
+#content .info .paragraph {
+    font-size: 14px;
+    color: var(--Dark-grayis-blue);
+    line-height: 1.6;
+}
+
+#content .info .price {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+
+}
+
+#content .info .price .discount {
+    font-size: 30px;
+    font-family: 'Fraunces', serif;
+    color: var(--dark-cyan);
+    margin-right: 20px;
+
+}
+
+#content .info button {
+    background: var(--dark-cyan);
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#content .info button::before {
+    content: "";
+    background: url(../images/icon-cart.svg)no-repeat;
+    width: 15px;
+    height: 16px;
+    padding-right: 10px;
+}
+
+@media(max-width:700px) {
+    #content {
+        grid-template-columns: 1fr;
+    }
+
+    img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+}
